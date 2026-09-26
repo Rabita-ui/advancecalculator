@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Advanced Voice Calculator</title>
+<title>Advanced Calculator</title>
 
 <style>
 * {
@@ -43,20 +43,6 @@ body {
 .title {
     color: #1f2937;
     font-size: 23px;
-}
-
-.voice-btn {
-    background: #e0f2fe;
-    color: #0369a1;
-    border: none;
-    border-radius: 10px;
-    padding: 9px 12px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.voice-btn:hover {
-    background: #bae6fd;
 }
 
 .display {
@@ -184,7 +170,6 @@ button:active {
 }
 
 @media (max-width: 450px) {
-
     body {
         padding: 10px;
     }
@@ -214,85 +199,79 @@ button:active {
 
 <div class="calculator">
 
-```
-<div class="top-bar">
-    <h1 class="title">Advanced Calculator</h1>
-
-    <button class="voice-btn" onclick="toggleVoice()" id="voiceButton">
-        🔊 Voice ON
-    </button>
-</div>
-
-<div class="display">
-    <div id="expression"></div>
-    <div id="result">0</div>
-</div>
-
-<!-- Memory -->
-<div class="memory-buttons">
-    <button onclick="memoryClear()">MC</button>
-    <button onclick="memoryRecall()">MR</button>
-    <button onclick="memoryAdd()">M+</button>
-    <button onclick="memorySubtract()">M−</button>
-</div>
-
-<!-- Buttons -->
-<div class="buttons">
-
-    <button class="special" onclick="clearAll()">AC</button>
-    <button class="special" onclick="deleteLast()">DEL</button>
-    <button class="function" onclick="addToExpression('(')">(</button>
-    <button class="function" onclick="addToExpression(')')">)</button>
-    <button class="operator" onclick="addToExpression('/')">÷</button>
-
-    <button class="function" onclick="addFunction('sin(')">sin</button>
-    <button class="function" onclick="addFunction('cos(')">cos</button>
-    <button class="function" onclick="addFunction('tan(')">tan</button>
-    <button class="function" onclick="addFunction('log(')">log</button>
-    <button class="function" onclick="addFunction('ln(')">ln</button>
-
-    <button class="function" onclick="addFunction('sqrt(')">√</button>
-    <button class="function" onclick="addToExpression('^')">xʸ</button>
-    <button class="function" onclick="addFactorial()">x!</button>
-    <button class="function" onclick="addToExpression('Math.PI')">π</button>
-    <button class="function" onclick="addToExpression('Math.E')">e</button>
-
-    <button onclick="addToExpression('7')">7</button>
-    <button onclick="addToExpression('8')">8</button>
-    <button onclick="addToExpression('9')">9</button>
-    <button class="operator" onclick="addToExpression('*')">×</button>
-    <button class="operator" onclick="addToExpression('%')">%</button>
-
-    <button onclick="addToExpression('4')">4</button>
-    <button onclick="addToExpression('5')">5</button>
-    <button onclick="addToExpression('6')">6</button>
-    <button class="operator" onclick="addToExpression('-')">−</button>
-    <button class="function" onclick="addToExpression('^2')">x²</button>
-
-    <button onclick="addToExpression('1')">1</button>
-    <button onclick="addToExpression('2')">2</button>
-    <button onclick="addToExpression('3')">3</button>
-    <button class="operator" onclick="addToExpression('+')">+</button>
-    <button class="function" onclick="calculatePercent()">%</button>
-
-    <button onclick="addToExpression('0')">0</button>
-    <button onclick="addToExpression('.')">.</button>
-    <button onclick="changeSign()">±</button>
-    <button class="equal" onclick="calculate()">=</button>
-
-</div>
-
-<div class="history">
-
-    <div class="history-header">
-        <strong>Calculation History</strong>
-        <button onclick="clearHistory()">Clear</button>
+    <div class="top-bar">
+        <h1 class="title">Advanced Calculator</h1>
     </div>
 
-    <div id="historyList"></div>
+    <div class="display">
+        <div id="expression"></div>
+        <div id="result">0</div>
+    </div>
 
-</div>
-```
+    <!-- Memory -->
+    <div class="memory-buttons">
+        <button onclick="memoryClear()">MC</button>
+        <button onclick="memoryRecall()">MR</button>
+        <button onclick="memoryAdd()">M+</button>
+        <button onclick="memorySubtract()">M−</button>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+
+        <button class="special" onclick="clearAll()">AC</button>
+        <button class="special" onclick="deleteLast()">DEL</button>
+        <button class="function" onclick="addToExpression('(')">(</button>
+        <button class="function" onclick="addToExpression(')')">)</button>
+        <button class="operator" onclick="addToExpression('/')">÷</button>
+
+        <button class="function" onclick="addFunction('sin(')">sin</button>
+        <button class="function" onclick="addFunction('cos(')">cos</button>
+        <button class="function" onclick="addFunction('tan(')">tan</button>
+        <button class="function" onclick="addFunction('log(')">log</button>
+        <button class="function" onclick="addFunction('ln(')">ln</button>
+
+        <button class="function" onclick="addFunction('sqrt(')">√</button>
+        <button class="function" onclick="addToExpression('^')">xʸ</button>
+        <button class="function" onclick="addFactorial()">x!</button>
+        <button class="function" onclick="addToExpression('Math.PI')">π</button>
+        <button class="function" onclick="addToExpression('Math.E')">e</button>
+
+        <button onclick="addToExpression('7')">7</button>
+        <button onclick="addToExpression('8')">8</button>
+        <button onclick="addToExpression('9')">9</button>
+        <button class="operator" onclick="addToExpression('*')">×</button>
+        <button class="operator" onclick="addToExpression('%')">%</button>
+
+        <button onclick="addToExpression('4')">4</button>
+        <button onclick="addToExpression('5')">5</button>
+        <button onclick="addToExpression('6')">6</button>
+        <button class="operator" onclick="addToExpression('-')">−</button>
+        <button class="function" onclick="addToExpression('^2')">x²</button>
+
+        <button onclick="addToExpression('1')">1</button>
+        <button onclick="addToExpression('2')">2</button>
+        <button onclick="addToExpression('3')">3</button>
+        <button class="operator" onclick="addToExpression('+')">+</button>
+        <button class="function" onclick="calculatePercent()">%</button>
+
+        <button onclick="addToExpression('0')">0</button>
+        <button onclick="addToExpression('.')">.</button>
+        <button onclick="changeSign()">±</button>
+        <button class="equal" onclick="calculate()">=</button>
+
+    </div>
+
+    <div class="history">
+
+        <div class="history-header">
+            <strong>Calculation History</strong>
+            <button onclick="clearHistory()">Clear</button>
+        </div>
+
+        <div id="historyList"></div>
+
+    </div>
 
 </div>
 
@@ -300,53 +279,10 @@ button:active {
 
 let expression = "";
 let memory = 0;
-let voiceEnabled = true;
 
 const expressionDisplay = document.getElementById("expression");
 const resultDisplay = document.getElementById("result");
 const historyList = document.getElementById("historyList");
-const voiceButton = document.getElementById("voiceButton");
-
-
-/* =========================
-   VOICE SYSTEM
-========================= */
-
-function speak(text) {
-
-    if (!voiceEnabled) return;
-
-    if (!("speechSynthesis" in window)) return;
-
-    window.speechSynthesis.cancel();
-
-    let speech = new SpeechSynthesisUtterance(text);
-
-    speech.rate = 0.9;
-    speech.pitch = 1;
-    speech.volume = 1;
-
-    window.speechSynthesis.speak(speech);
-}
-
-
-function toggleVoice() {
-
-    voiceEnabled = !voiceEnabled;
-
-    window.speechSynthesis.cancel();
-
-    if (voiceEnabled) {
-
-        voiceButton.innerHTML = "🔊 Voice ON";
-        speak("Voice enabled");
-
-    } else {
-
-        voiceButton.innerHTML = "🔇 Voice OFF";
-
-    }
-}
 
 
 /* =========================
@@ -369,40 +305,12 @@ function updateDisplay() {
 
 
 /* =========================
-   INPUT VOICE
-========================= */
-
-function getVoiceName(value) {
-
-    const voiceNames = {
-
-        "+": "plus",
-        "-": "minus",
-        "*": "multiply",
-        "/": "divide",
-        ".": "point",
-        "(": "open bracket",
-        ")": "close bracket",
-        "%": "percent",
-        "^": "power",
-        "Math.PI": "pi",
-        "Math.E": "e"
-
-    };
-
-    return voiceNames[value] || value;
-}
-
-
-/* =========================
    CALCULATOR INPUT
 ========================= */
 
 function addToExpression(value) {
 
     expression += value;
-
-    speak(getVoiceName(value));
 
     updateDisplay();
 }
@@ -411,19 +319,6 @@ function addToExpression(value) {
 function addFunction(func) {
 
     expression += func;
-
-    let name = func.replace("(", "");
-
-    const names = {
-        "sin": "sine",
-        "cos": "cosine",
-        "tan": "tangent",
-        "log": "logarithm",
-        "ln": "natural logarithm",
-        "sqrt": "square root"
-    };
-
-    speak(names[name] || name);
 
     updateDisplay();
 }
@@ -435,8 +330,6 @@ function clearAll() {
 
     resultDisplay.textContent = "0";
 
-    speak("All clear");
-
     updateDisplay();
 }
 
@@ -444,8 +337,6 @@ function clearAll() {
 function deleteLast() {
 
     expression = expression.slice(0, -1);
-
-    speak("Delete");
 
     updateDisplay();
 }
@@ -478,8 +369,6 @@ function addFactorial() {
     if (expression !== "") {
 
         expression += "!";
-
-        speak("factorial");
 
         updateDisplay();
 
@@ -533,8 +422,6 @@ function calculate() {
 
         resultDisplay.textContent = answer;
 
-        speak("The answer is " + answer);
-
         addHistory(expressionDisplay.textContent, answer);
 
         expression = String(answer);
@@ -544,8 +431,6 @@ function calculate() {
     catch (error) {
 
         resultDisplay.textContent = "Error";
-
-        speak("Calculation error");
 
     }
 }
@@ -572,8 +457,6 @@ function calculatePercent() {
 
             resultDisplay.textContent = expression;
 
-            speak("The answer is " + expression);
-
         }
 
     }
@@ -581,8 +464,6 @@ function calculatePercent() {
     catch {
 
         resultDisplay.textContent = "Error";
-
-        speak("Calculation error");
 
     }
 }
@@ -598,8 +479,6 @@ function changeSign() {
 
     expression = "-(" + expression + ")";
 
-    speak("Change sign");
-
     updateDisplay();
 }
 
@@ -612,16 +491,12 @@ function memoryClear() {
 
     memory = 0;
 
-    speak("Memory cleared");
-
 }
 
 
 function memoryRecall() {
 
     expression += memory;
-
-    speak("Memory recall " + memory);
 
     updateDisplay();
 
@@ -636,8 +511,6 @@ function memoryAdd() {
 
         memory += value;
 
-        speak("Added to memory");
-
     }
 }
 
@@ -649,8 +522,6 @@ function memorySubtract() {
     if (!isNaN(value)) {
 
         memory -= value;
-
-        speak("Subtracted from memory");
 
     }
 }
@@ -674,8 +545,6 @@ function addHistory(exp, answer) {
 
         resultDisplay.textContent = answer;
 
-        speak("Selected result " + answer);
-
         updateDisplay();
 
     };
@@ -687,8 +556,6 @@ function addHistory(exp, answer) {
 function clearHistory() {
 
     historyList.innerHTML = "";
-
-    speak("History cleared");
 
 }
 
